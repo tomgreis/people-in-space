@@ -1,0 +1,9 @@
+body {
+    background-color: #282828;
+    color: #a7f82d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.number {
+    font-size: 10rem;
+}
