@@ -2,21 +2,21 @@ console.log("Sanity check");
 
 console.clear();
 
-// const
+// connect wit index.html
 
-const numberOfPeople = document.querySelector('[data-js="numberOfPeople"]');
+const numberOfPeopleInSpace = document.querySelector('[data-js="number-of-people-in-space"]');
 
-// fetch + filter
+// fetch + filter data
 
-async function fetchData () {
+async function fetchNames () {
 
     const response = await fetch("http://api.open-notify.org/astros.json");
     const data = await response.json();
     console.log("data: ", data.people.length);
 
-    const peopleInSpace = data.people.length;
-    console.log(peopleInSpace);
-    numberOfPeople.textContent = peopleInSpace;
+    const number = data.people.length;
+    console.log(number);
+    numberOfPeopleInSpace.textContent = number;
 
 }
-fetchData();
+fetchNames();
